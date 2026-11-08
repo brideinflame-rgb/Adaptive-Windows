@@ -899,6 +899,25 @@ static std::vector<double> Distribute(double total, const std::vector<double>& r
 }
 
 // mins[i] = tamanho mínimo (da área visível) que a i-ésima janela aceita; 0 = sem mínimo.
+// Empurra o espaço para dentro da área, mas nunca para fora do lado esquerdo/de cima dela (não invade o
+// monitor vizinho); se for maior que a área, o excesso sai pela borda direita/de baixo. Soma o excesso em "over".
+static void ClampIntoArea(RECT& r, const RECT& a, double* over) {
+    if (r.bottom > a.bottom) {
+        LONG d = r.bottom - a.bottom;
+        LONG m = std::max<LONG>(0, std::min(d, r.top - a.top));
+        r.top -= m;
+        r.bottom -= m;
+        if (over) *over += d;
+    }
+    if (r.right > a.right) {
+        LONG d = r.right - a.right;
+        LONG m = std::max<LONG>(0, std::min(d, r.left - a.left));
+        r.left -= m;
+        r.right -= m;
+        if (over) *over += d;
+    }
+}
+
 static std::vector<RECT> ComputeSlotsEx(int n, RECT a, const std::vector<SIZE>& mins, int layout, bool pad, double* overflow = nullptr,
                                          const std::vector<std::pair<double, double>>* wts = nullptr) {
     std::vector<RECT> out;
@@ -1015,10 +1034,7 @@ static std::vector<RECT> ComputeSlotsEx(int n, RECT a, const std::vector<SIZE>& 
             x += colW[col] + gap;
         }
         for (auto& r : out) {
-            // empurra para dentro da área, mas nunca para fora do lado esquerdo/de cima dela (não invade o monitor vizinho);
-            // se a janela é maior que a área, o excesso sai pela borda direita/de baixo
-            if (r.bottom > a.bottom) { LONG d = r.bottom - a.bottom; LONG m = std::max<LONG>(0, std::min(d, r.top - a.top)); r.top -= m; r.bottom -= m; if (overflow) *overflow += d; }
-            if (r.right > a.right) { LONG d = r.right - a.right; LONG m = std::max<LONG>(0, std::min(d, r.left - a.left)); r.left -= m; r.right -= m; if (overflow) *overflow += d; }
+            ClampIntoArea(r, a, overflow);
         }
         return out;
     }
@@ -1093,8 +1109,7 @@ static std::vector<RECT> ComputeSlotsEx(int n, RECT a, const std::vector<SIZE>& 
     // se os mínimos não couberem, a janela sobrepõe a de cima em vez de ficar fora da área útil
     double localOver = 0;
     for (auto& r : out) {
-        if (r.bottom > a.bottom) { LONG d = r.bottom - a.bottom; LONG m = std::max<LONG>(0, std::min(d, r.top - a.top)); r.top -= m; r.bottom -= m; localOver += d; }
-        if (r.right > a.right) { LONG d = r.right - a.right; LONG m = std::max<LONG>(0, std::min(d, r.left - a.left)); r.left -= m; r.right -= m; localOver += d; }
+        ClampIntoArea(r, a, &localOver);
     }
     // "Linhas" compartilha a altura entre janelas da mesma linha e por isso estoura com facilidade
     // (ex.: Outlook 648 + Spotify 715 de altura mínima numa tela de 1250). No layout de nível superior,
