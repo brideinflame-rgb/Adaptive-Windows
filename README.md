@@ -2,7 +2,7 @@
 
 *(Português do Brasil logo abaixo / Brazilian Portuguese below)*
 
-![Adaptive Windows demo](https://raw.githubusercontent.com/brideinflame-rgb/Adaptive-Windows/main/screenshot/demo.gif)
+![Adaptive Windows demo](https://raw.githubusercontent.com/brideinflame-rgb/Adaptive-Windows/main/screenshot/adaptive-windows-demo.gif)
 
 ## English
 
