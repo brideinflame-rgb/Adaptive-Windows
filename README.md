@@ -11,6 +11,9 @@ It arranges the windows of each monitor in a grid, animates every change with fl
 and works together with minimize / restore / open animation mods: a window is animated
 **straight to the new place assigned by the grid**, not to where it used to be.
 
+The mod runs in its own `windhawk.exe` process (a Windhawk "tool mod"), not inside Explorer, so a
+problem in it cannot take down the taskbar or File Explorer.
+
 ### Features
 - **Automatic grid.** A new window takes a slot and the others make room for it; when a window
   closes or is minimized, the rest take over the free space.
@@ -32,14 +35,14 @@ and works together with minimize / restore / open animation mods: a window is an
 ### Hotkeys
 | Hotkey | Action |
 |--------|--------|
-| Alt + G (default) | Cycle the layout: auto, columns, rows, grid, main left, main top |
-| Alt + T (default) | Take the focused window out of the grid (it stays where it is and the others use the space); press again to put it back |
+| Win + Ctrl + G (default) | Cycle the layout: auto, columns, rows, grid, main left, main top |
+| Win + Ctrl + T (default) | Take the focused window out of the grid (it stays where it is and the others use the space); press again to put it back |
 | Win + Alt + F | Focus mode: every window on the monitor fills the screen |
 | Win + Alt + ← / → | Swap the focused window with the previous / next one |
 | Win + Alt + ↓ | Re-arrange everything and put all windows back in the grid |
 
 The Win + Alt hotkeys can use another modifier in the settings (Ctrl+Alt, Ctrl+Alt+Shift or
-Alt+Shift) if another program already uses them; restart the mod after changing. Alt+G and Alt+T
+Alt+Shift) if another program already uses them; restart the mod after changing. Win+Ctrl+G and Win+Ctrl+T
 are the defaults and can be changed in the settings (text fields such as "Ctrl+Alt+G" or
 "Win+T"; leave empty to turn the hotkey off). Unavailable hotkeys are reported in the Windhawk
 log (error 1409 = already in use).
@@ -86,7 +89,6 @@ Radius"), leave this option on "do not touch" so the two do not fight over the c
   separated by semicolons). The list is empty by default.
 - Windows that refuse to be positioned (a likely case is programs running as administrator) float
   after a few attempts; Win + Alt + ↓ tries again.
-- The settings screen is currently in Brazilian Portuguese only.
 
 ---
 
@@ -96,6 +98,9 @@ Gerenciador de janelas em grade automática para o Windows 11, inspirado nos ví
 do **Nava OS**. Ele organiza as janelas de cada monitor, anima as mudanças com transições fluidas
 e funciona junto com os mods de animação de minimizar, restaurar e abrir janelas: a janela
 é animada **já para o novo lugar definido pela grade**, e não para onde ela estava antes.
+
+O mod roda em um processo `windhawk.exe` próprio (um "tool mod" do Windhawk), e não dentro do
+Explorer, então um problema nele não derruba a barra de tarefas nem o Explorador de Arquivos.
 
 ### O que ele faz
 - **Grade automática.** Cada janela nova ocupa um espaço da grade e as outras abrem espaço para
@@ -119,14 +124,14 @@ e funciona junto com os mods de animação de minimizar, restaurar e abrir janel
 ### Atalhos
 | Atalho | Ação |
 |--------|------|
-| Alt + G (padrão) | Troca o layout: automático, colunas, linhas, grade, principal à esquerda, principal em cima |
-| Alt + T (padrão) | Tira a janela em foco da grade (ela fica onde está e as outras ocupam o espaço); apertar de novo devolve à grade |
+| Win + Ctrl + G (padrão) | Troca o layout: automático, colunas, linhas, grade, principal à esquerda, principal em cima |
+| Win + Ctrl + T (padrão) | Tira a janela em foco da grade (ela fica onde está e as outras ocupam o espaço); apertar de novo devolve à grade |
 | Win + Alt + F | Modo foco: todas as janelas do monitor ocupam a tela toda |
 | Win + Alt + ← / → | Troca a janela em foco com a anterior / a próxima |
 | Win + Alt + ↓ | Reorganiza tudo e devolve todas as janelas à grade |
 
 Os atalhos com Win + Alt podem trocar de modificador nas configurações (Ctrl+Alt, Ctrl+Alt+Shift
-ou Alt+Shift) caso outro programa já os use; reinicie o mod depois de mudar. Alt+G e Alt+T são
+ou Alt+Shift) caso outro programa já os use; reinicie o mod depois de mudar. Win+Ctrl+G e Win+Ctrl+T são
 os padrões e podem ser trocados nas configurações (campos de texto como "Ctrl+Alt+G" ou "Win+T";
 deixe vazio para desligar o atalho). Atalhos indisponíveis aparecem no log do Windhawk
 (erro 1409 = já em uso).
