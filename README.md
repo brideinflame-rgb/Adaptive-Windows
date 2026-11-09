@@ -68,7 +68,12 @@ Win + Ctrl + T is also the default Always On Top shortcut of PowerToys: if you u
 Adaptive Windows works together with these two mods:
 
 - **MacOS Minimize Animation** (genie effect for minimize, restore and open).
+
+![Adaptive Windows demo](https://raw.githubusercontent.com/brideinflame-rgb/Adaptive-Windows/main/screenshot/macosminimize.gif)
+
 - **Windows Animations**.
+
+![Adaptive Windows demo](https://raw.githubusercontent.com/brideinflame-rgb/Adaptive-Windows/main/screenshot/windowsanimation.gif)
 
 Those mods hide the window and play their own animation. With the *sync with open/close
 animations* option on, Adaptive Windows notices this, puts the window in its final slot while it
