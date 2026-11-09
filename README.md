@@ -32,6 +32,20 @@ problem in it cannot take down the taskbar or File Explorer.
   imposes: the minimum size is decided by the app (and grows with the monitor's scale), so an app
   whose minimum is wider than the monitor will overflow its right / bottom edge.
 
+### Free resizing: when it works
+Dragging a window border adapts the grid only when all of these are true:
+- The window is in the grid: not taken out with the float hotkey, not maximized and not minimized.
+- There are at least two windows in the grid on the same monitor.
+- You drag an edge that faces another window. An edge against the screen border has no neighbor to
+  take space from, so dragging it does nothing and the window goes back to its slot.
+- You hold the window by its border (within about 12 px of the left, right or bottom edge, or the
+  top 5 px) and change its size by more than 6 px. Holding it by the middle or the title bar moves
+  the window instead (drop it over another window to swap, anywhere else to send it back).
+
+In the "main left" / "main top" layouts, dragging the divider of the main window changes how much of
+the screen it takes. Each app's minimum size still applies. Your sizes are discarded when a window
+is opened, closed or minimized, when the layout changes (Win + Ctrl + G) and with Win + Alt + ↓.
+
 ### Hotkeys
 | Hotkey | Action |
 |--------|--------|
@@ -40,6 +54,7 @@ problem in it cannot take down the taskbar or File Explorer.
 | Win + Alt + F | Focus mode: every window on the monitor fills the screen |
 | Win + Alt + ← / → | Swap the focused window with the previous / next one |
 | Win + Alt + ↓ | Re-arrange everything and put all windows back in the grid |
+| Win + Alt + ↑ | Reserved, does nothing: it only stops Windows from snapping the window to the top half of the screen |
 
 The Win + Alt hotkeys can use another modifier in the settings (Ctrl+Alt, Ctrl+Alt+Shift or
 Alt+Shift) if another program already uses them; restart the mod after changing. Win+Ctrl+G and Win+Ctrl+T
@@ -52,14 +67,8 @@ Win + Ctrl + T is also the default Always On Top shortcut of PowerToys: if you u
 ### Works with other animation mods
 Adaptive Windows works together with these two mods:
 
-- **Windows Animations**.
-  
-![Adaptive Windows demo](https://raw.githubusercontent.com/brideinflame-rgb/Adaptive-Windows/main/screenshot/windowsanimation.gif)
-
-
 - **MacOS Minimize Animation** (genie effect for minimize, restore and open).
-
-![Adaptive Windows demo](https://raw.githubusercontent.com/brideinflame-rgb/Adaptive-Windows/main/screenshot/macosminimize.gif)
+- **Windows Animations**.
 
 Those mods hide the window and play their own animation. With the *sync with open/close
 animations* option on, Adaptive Windows notices this, puts the window in its final slot while it
@@ -131,6 +140,21 @@ Explorer, então um problema nele não derruba a barra de tarefas nem o Explorad
   monitor), então um app cujo mínimo é maior que a largura do monitor vai passar da borda direita
   / de baixo.
 
+### Redimensionamento livre: quando funciona
+Arrastar a borda de uma janela adapta a grade apenas quando todas estas condições são verdadeiras:
+- A janela está na grade: não foi tirada com o atalho de soltar, nem está maximizada ou minimizada.
+- Há pelo menos duas janelas na grade no mesmo monitor.
+- Você arrasta uma borda que encosta em outra janela. Uma borda junto da borda da tela não tem
+  vizinha para ceder espaço, então arrastá-la não faz nada e a janela volta ao seu espaço.
+- Você segura a janela pela borda (a cerca de 12 px da lateral esquerda, direita ou de baixo, ou
+  nos 5 px de cima) e muda o tamanho em mais de 6 px. Segurar pelo meio ou pela barra de título
+  move a janela (solte sobre outra para trocar, ou em qualquer outro ponto para devolvê-la).
+
+Nos layouts "principal à esquerda" / "principal em cima", arrastar a divisória da janela principal
+muda a parte da tela que ela ocupa. O tamanho mínimo de cada app continua valendo. Os tamanhos
+escolhidos são descartados quando uma janela é aberta, fechada ou minimizada, quando o layout muda
+(Win + Ctrl + G) e com Win + Alt + ↓.
+
 ### Atalhos
 | Atalho | Ação |
 |--------|------|
@@ -139,6 +163,7 @@ Explorer, então um problema nele não derruba a barra de tarefas nem o Explorad
 | Win + Alt + F | Modo foco: todas as janelas do monitor ocupam a tela toda |
 | Win + Alt + ← / → | Troca a janela em foco com a anterior / a próxima |
 | Win + Alt + ↓ | Reorganiza tudo e devolve todas as janelas à grade |
+| Win + Alt + ↑ | Reservado, não faz nada: apenas impede o Windows de encaixar a janela na metade de cima da tela |
 
 Os atalhos com Win + Alt podem trocar de modificador nas configurações (Ctrl+Alt, Ctrl+Alt+Shift
 ou Alt+Shift) caso outro programa já os use; reinicie o mod depois de mudar. Win+Ctrl+G e Win+Ctrl+T são
