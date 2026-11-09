@@ -47,6 +47,8 @@ are the defaults and can be changed in the settings (text fields such as "Ctrl+A
 "Win+T"; leave empty to turn the hotkey off). Unavailable hotkeys are reported in the Windhawk
 log (error 1409 = already in use).
 
+Win + Ctrl + T is also the default Always On Top shortcut of PowerToys: if you use both, change one of them.
+
 ### Works with other animation mods
 Adaptive Windows works together with these two mods:
 
@@ -135,6 +137,8 @@ ou Alt+Shift) caso outro programa já os use; reinicie o mod depois de mudar. Wi
 os padrões e podem ser trocados nas configurações (campos de texto como "Ctrl+Alt+G" ou "Win+T";
 deixe vazio para desligar o atalho). Atalhos indisponíveis aparecem no log do Windhawk
 (erro 1409 = já em uso).
+
+Win + Ctrl + T também é o atalho padrão do Always On Top do PowerToys: se você usa os dois, troque um deles.
 
 ### Funciona junto com outros mods de animação
 O Adaptive Windows funciona junto com estes dois mods:
