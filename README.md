@@ -78,7 +78,9 @@ The frame rate can follow the DWM (recommended) or be fixed.
 The usable area is the Windows work area. The screen-edge margin applies to all four sides. If the
 taskbar is hidden, windows only respect the screen edge. The bottom spacing setting (0 = automatic)
 is meant for docks drawn by another mod: enter the distance from the screen edge to the top of
-the dock.
+the dock. The taskbar can be on any edge of any monitor: the grid follows the Windows work
+area, and is re-computed when a monitor is connected or removed, the resolution changes, or the
+taskbar is moved or toggles auto-hide.
 
 ### Corners
 Uses the Windows 11 corner preference (default, rounded, small, square). Windows does not allow an
@@ -169,7 +171,9 @@ sobreposição. A taxa de quadros pode seguir o DWM (recomendado) ou ser fixada.
 A área útil é a área de trabalho do Windows. A **Margem da borda da tela** vale para os quatro
 lados. Se a barra de tarefas estiver escondida, as janelas respeitam apenas a borda da tela.
 **Espaço embaixo** (0 = automático) serve para docks desenhados por outro mod: informe a distância
-da borda da tela até o topo do dock.
+da borda da tela até o topo do dock. A barra de tarefas pode ficar em qualquer lado de qualquer monitor: a grade segue a área
+de trabalho do Windows e é refeita quando um monitor é conectado ou removido, a resolução muda, ou a
+barra é movida ou muda a opção de ocultar automaticamente.
 
 ### Cantos
 Usa a preferência de cantos do próprio Windows 11 (padrão, arredondado, pequeno, quadrado).
