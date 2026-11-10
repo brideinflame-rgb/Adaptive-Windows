@@ -123,6 +123,8 @@ arbitrary radius this way. If you already use a corner mod (for example "Custom 
 Radius"), leave this option on "do not touch" so the two do not fight over the corners.
 
 ### Ignored windows and limits
+- Settings apply as soon as you save them; there is no need to restart the mod. Changing the
+  **windows to ignore** list also takes windows out of the grid (or brings them in) right away.
 - Tool windows, always-on-top, non-focusable and non-resizable windows (panels, widgets) stay out
   of the grid, as do the ones in the **windows to ignore** list (part of the title or class,
   separated by semicolons). The list is empty by default. The Windhawk log says why each window
@@ -254,6 +256,8 @@ O Windows não permite raio arbitrário por esta via. Se você já usa um mod de
 os cantos.
 
 ### Janelas ignoradas e limites
+- As configurações valem assim que você as salva, sem reiniciar o mod. Mudar a lista de
+  **Janelas a ignorar** também tira janelas da grade (ou as traz) na hora.
 - Ficam fora da grade janelas de ferramenta, sempre no topo, sem foco, sem moldura redimensionável
   (por exemplo, painéis e widgets), e as da lista **Janelas a ignorar** (parte do título ou da
   classe, separadas por ponto e vírgula). A lista vem vazia por padrão. O log do Windhawk diz por
