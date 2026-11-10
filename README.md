@@ -69,16 +69,19 @@ Every hotkey can be changed in the settings, and the change applies as soon as y
 - Avoid combinations without Win or Ctrl: they take the key away from every other app.
 
 Hotkeys that cannot be registered are reported in the Windhawk log (error 1409 = already in use).
+Win + Alt + ↑ is one of them unless you turn on *Take over hotkeys* (see below).
 Win + Ctrl + T is also the default Always On Top shortcut of PowerToys: if you use both, change one
 of them.
 
 #### Taking over shortcuts that are already in use
-Windows itself uses some of these combinations (Win + Alt + ↑ snaps the window to the top half of the
-screen). When a hotkey is already taken, the *Take over hotkeys* option (on by default) makes the
-mod catch that combination with a low-level keyboard hook, so the other program or Windows no longer
-receives it. Turn the option off if you do not want the mod to override other programs' shortcuts;
-the combination is then simply unavailable and reported in the log. The hook only exists while the
-mod runs, and only for the combinations that were already taken.
+Windows itself uses some of these combinations: Win + Alt + ↑ snaps the window to the top half of the
+screen, so with the default settings it is unavailable to the mod (the log reports error 1409) and
+Windows keeps handling it. The mod never overrides another program's shortcut unless you ask it to.
+To use Win + Alt + ↑, turn on the *Take over hotkeys* option (off by default) or pick another set
+of modifiers for the arrows. With the option on, whenever a hotkey is already taken the mod
+catches that combination with a low-level keyboard hook, so the other program or Windows no longer
+receives it. The hook runs in a thread of its own, exists only while the mod runs, and only for the
+combinations that were already taken.
 
 ### Works with other animation mods
 Adaptive Windows works together with these two mods:
@@ -201,16 +204,19 @@ Todos os atalhos podem ser trocados nas configurações, e a mudança vale assim
 - Evite combinações sem Win ou Ctrl: elas tiram a tecla de todos os outros apps.
 
 Atalhos que não puderem ser registrados aparecem no log do Windhawk (erro 1409 = já em uso).
+Win + Alt + ↑ é um deles, a menos que você ligue *Assumir atalhos* (veja abaixo).
 Win + Ctrl + T também é o atalho padrão do Always On Top do PowerToys: se você usa os dois, troque
 um deles.
 
 #### Assumir atalhos que já estão em uso
-O próprio Windows usa algumas dessas combinações (Win + Alt + ↑ encaixa a janela na metade de cima
-da tela). Quando um atalho já está ocupado, a opção *Assumir atalhos* (ligada por padrão) faz o mod
-capturar essa combinação com um gancho de teclado de baixo nível, e o outro programa ou o Windows
-deixa de recebê-la. Desligue a opção se não quiser que o mod sobrescreva atalhos de outros
-programas; a combinação fica então indisponível e é registrada no log. O gancho só existe enquanto o
-mod está ligado, e só para as combinações que já estavam ocupadas.
+O próprio Windows usa algumas dessas combinações: Win + Alt + ↑ encaixa a janela na metade de cima
+da tela, então com as configurações padrão ela fica indisponível para o mod (o log mostra o erro
+1409) e o Windows continua tratando-a. O mod nunca sobrescreve o atalho de outro programa se você
+não pedir. Para usar Win + Alt + ↑, ligue a opção *Assumir atalhos* (desligada por padrão) ou escolha
+outros modificadores para as setas. Com a opção ligada, sempre que um atalho já estiver ocupado o
+mod captura essa combinação com um gancho de teclado de baixo nível, e o outro programa ou o
+Windows deixa de recebê-la. O gancho roda numa thread própria, só existe enquanto o mod está ligado,
+e só para as combinações que já estavam ocupadas.
 
 ### Funciona junto com outros mods de animação
 O Adaptive Windows funciona junto com estes dois mods:
