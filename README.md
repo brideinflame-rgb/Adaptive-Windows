@@ -28,12 +28,19 @@ problem in it cannot take down the taskbar or File Explorer.
 - **Move windows with the keyboard.** Win + Alt + arrows swap the focused window with its neighbor
   on that side.
 - **Maximized windows** that return to or enter the grid go back to normal mode and take their slot.
+  Turn on *Keep maximized windows maximized* to leave them alone instead: they stay maximized,
+  outside the grid, and take their slot again when they stop being maximized.
 - **Animated border on the focused window**: color, effect (solid, pulse, rainbow, gradient), line
   width, glow, corner radius and offset, so it can match your rounded corners mod.
 - **Multiple monitors.** Each monitor has its own grid, and windows can be dragged between them,
   including monitors with different display scales. It works within the limits each window or app
   imposes: the minimum size is decided by the app (and grows with the monitor's scale), so an app
   whose minimum is wider than the monitor will overflow its right / bottom edge.
+- **Display scale aware.** The gap, the screen-edge margin and the border sizes (width, glow, offset,
+  corner radius) are set in pixels at 100% scale and scaled for each monitor, so they look the same
+  on a 100% and on a 200% monitor.
+- **Virtual desktops.** When you switch desktops, the windows of the desktop you come back to return
+  to the same slots and order, without replaying the entrance animation.
 
 ### Free resizing: when it works
 Dragging a window border adapts the grid only when all of these are true:
@@ -162,6 +169,8 @@ Explorer, então um problema nele não derruba a barra de tarefas nem o Explorad
 - **Mover janelas pelo teclado.** Win + Alt + setas trocam a janela em foco com a vizinha daquele
   lado.
 - **Janelas maximizadas** que voltam ou entram na grade passam ao modo normal e assumem o espaço.
+  Ligue *Manter janelas maximizadas* para deixá-las em paz: elas continuam maximizadas, fora da
+  grade, e assumem o espaço de novo quando deixam de estar maximizadas.
 - **Borda animada na janela em foco**: cor, efeito (fixa, pulsar, arco-íris, degradê), largura da
   linha, brilho, raio dos cantos e deslocamento, para alinhar com o seu mod de cantos arredondados.
 - **Vários monitores.** Cada monitor tem a sua própria grade, e as janelas podem ser arrastadas
@@ -169,6 +178,11 @@ Explorer, então um problema nele não derruba a barra de tarefas nem o Explorad
   impostos por cada janela ou app: o tamanho mínimo é decidido pelo app (e cresce com a escala do
   monitor), então um app cujo mínimo é maior que a largura do monitor vai passar da borda direita
   / de baixo.
+- **Respeita a escala de cada monitor.** O espaço entre janelas, a margem da borda da tela e as
+  medidas da borda (largura, brilho, deslocamento, raio dos cantos) são configurados em pixels a
+  100% de escala e ajustados a cada monitor, então ficam iguais num monitor de 100% e num de 200%.
+- **Áreas de trabalho virtuais.** Ao trocar de área, as janelas da área para a qual você volta
+  retomam os mesmos espaços e a mesma ordem, sem repetir a animação de entrada.
 
 ### Redimensionamento livre: quando funciona
 Arrastar a borda de uma janela adapta a grade apenas quando todas estas condições são verdadeiras:
