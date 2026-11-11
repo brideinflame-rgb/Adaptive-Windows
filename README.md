@@ -107,7 +107,7 @@ combinations that were already taken.
 ### Radial menu: moving a window with the mouse
 Off by default. In the settings, choose which button opens it: the right button, the middle button,
 or Alt / Win + the left button. Then press and hold that button over a window of the grid. A ring
-appears where the cursor is. Move the mouse out of the ring to the left, right, up or down: that
+appears where the cursor is (after a brief hold, so a quick click does not flash it). Move the mouse out of the ring to the left, right, up or down: that
 slice of the ring lights up and the slot the window will go to is highlighted. Release the button
 to swap the window with the one in that slot. Esc cancels. If there is no window on that side, the
 slice turns gray and nothing happens. It only considers windows on the same monitor.
@@ -284,7 +284,7 @@ e só para as combinações que já estavam ocupadas.
 ### Menu radial: mover a janela com o mouse
 Desligado por padrão. Nas configurações, escolha o botão que o abre: o botão direito, o do meio, ou
 Alt / Win + botão esquerdo. Depois pressione e segure esse botão sobre uma janela da grade. Um anel
-aparece onde o cursor está. Mova o mouse para fora do anel, para a esquerda, direita, cima ou
+aparece onde o cursor está (depois de um instante, para não piscar num clique rápido). Mova o mouse para fora do anel, para a esquerda, direita, cima ou
 baixo: aquela fatia do anel acende e o espaço para onde a janela vai é destacado. Solte o botão
 para trocar a janela de lugar com a que ocupa aquele espaço. Esc cancela. Se não houver janela
 daquele lado, a fatia fica cinza e nada acontece. Só considera janelas do mesmo monitor.
