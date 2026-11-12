@@ -70,6 +70,12 @@ side has a neighbor, the window goes back to its slot. Esc cancels. AltSnap / Al
 Alt + right button gesture: if you run one of them too, change the gesture there or leave this
 option off, otherwise windows of the grid are resized by this mod and the other windows by them.
 
+Windows can be moved in a similar way: turn on *Move windows with Alt + left button*, hold Alt and
+the left button anywhere over a window, and drag. A floating window just moves. A window of the
+grid is pulled out of the grid after a short drag (about 40 px) and follows the mouse as a floating
+window. If the radial menu is set to Alt + left button, that gesture opens the menu over windows of
+the grid instead.
+
 In the "main left" / "main top" layouts, dragging the divider of the main window changes how much of
 the screen it takes. Each app's minimum size still applies. Your sizes are discarded when a window
 is opened, closed or minimized, when the layout changes and when you re-arrange everything
@@ -122,8 +128,14 @@ slice of the ring lights up and the slot the window will go to is highlighted. R
 to swap the window with the one in that slot. Esc cancels. If there is no window on that side, the
 slice turns gray and nothing happens. It only considers windows on the same monitor.
 
-The ring has two themes: **Classic** (a flat ring) and **Glass** (a glass tube showing the blurred
-screen behind it, with highlights). The selection color paints the chosen slice
+The center of the ring floats and un-floats windows without the keyboard. Keep the button pressed
+with the cursor still: a small circle in the middle fills up in about half a second. Release once
+it is full and the window leaves the grid (the others take its place). Do the same over a floating
+window and it goes back into the grid. Releasing before it is full is an ordinary click.
+
+The ring has three themes: **Liquid glass**, the default (clear glass: the screen shows through
+sharp and bends at the edges of the ring), **Glass** (a frosted glass tube showing the blurred
+screen behind it) and **Classic** (a flat ring). The selection color paints the chosen slice
 and the highlight over the window that will receive the one you are moving. By default the colors
 are the focused window border ones, following its effect (pulse, rainbow, gradient); choose
 *Custom* to set the ring color and the selection color yourself. The ring thickness can be set too.
@@ -260,6 +272,12 @@ cancela. O AltSnap / AltDrag usam o mesmo gesto de Alt + botão direito: se voc�
 troque o gesto lá ou deixe esta opção desligada; senão as janelas da grade são redimensionadas por
 este mod e as demais por eles.
 
+As janelas podem ser movidas de forma parecida: ligue *Mover janelas com Alt + botão esquerdo*,
+segure Alt e o botão esquerdo em qualquer ponto de uma janela e arraste. Uma janela solta apenas se
+move. Uma janela da grade é arrancada da grade depois de um arrasto curto (uns 40 px) e acompanha o
+mouse como janela solta. Se o menu radial estiver em Alt + botão esquerdo, esse gesto abre o menu
+sobre as janelas da grade.
+
 Nos layouts "principal à esquerda" / "principal em cima", arrastar a divisória da janela principal
 muda a parte da tela que ela ocupa. O tamanho mínimo de cada app continua valendo. Os tamanhos
 escolhidos são descartados quando uma janela é aberta, fechada ou minimizada, quando o layout muda
@@ -312,8 +330,14 @@ baixo: aquela fatia do anel acende e o espaço para onde a janela vai é destaca
 para trocar a janela de lugar com a que ocupa aquele espaço. Esc cancela. Se não houver janela
 daquele lado, a fatia fica cinza e nada acontece. Só considera janelas do mesmo monitor.
 
-O anel tem dois temas: **Clássico** (anel liso) e **Vidro** (um tubo de vidro que mostra a tela
-desfocada atrás dele, com brilhos). A cor da seleção pinta a fatia escolhida e o
+O centro do anel solta e prende janelas sem o teclado. Mantenha o botão pressionado com o cursor
+parado: um pequeno círculo no meio se enche em cerca de meio segundo. Solte quando estiver cheio e
+a janela sai da grade (as outras ocupam o lugar dela). Faça o mesmo sobre uma janela solta e ela
+volta para a grade. Soltar antes de encher é um clique comum.
+
+O anel tem três temas: **Vidro líquido**, o padrão (vidro transparente: a tela aparece nítida e
+se curva nas bordas do anel), **Vidro** (um tubo de vidro fosco que mostra a tela desfocada atrás
+dele) e **Clássico** (anel liso). A cor da seleção pinta a fatia escolhida e o
 destaque sobre a janela que vai receber a que você está movendo. Por padrão as cores são as da
 borda da janela em foco, acompanhando o efeito dela (pulsar, arco-íris, degradê); escolha
 *Personalizadas* para definir você mesmo a cor do anel e a cor da seleção. A espessura do anel
