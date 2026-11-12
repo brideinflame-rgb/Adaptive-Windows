@@ -66,15 +66,19 @@ cursor follows the mouse (the right side if you hold the right half of the windo
 drag outward to enlarge the window, inward to shrink it. The other windows move out of the way
 while you drag, so nothing overlaps.
 A side against the screen border has no neighbor, so the opposite side is used instead; if neither
-side has a neighbor, the window goes back to its slot. Esc cancels. AltSnap / AltDrag use the same
-Alt + right button gesture: if you run one of them too, change the gesture there or leave this
-option off, otherwise windows of the grid are resized by this mod and the other windows by them.
+side has a neighbor, the window goes back to its slot. Esc cancels.
 
 Windows can be moved in a similar way: turn on *Move windows with Alt + left button*, hold Alt and
 the left button anywhere over a window, and drag. A floating window just moves. A window of the
 grid is pulled out of the grid after a short drag (about 40 px) and follows the mouse as a floating
 window. If the radial menu is set to Alt + left button, that gesture opens the menu over windows of
 the grid instead.
+
+**If you also use AltDrag or AltSnap.** They use the same two gestures (Alt + left button to move,
+Alt + right button to resize) on every window. With both running, a drag over a window this mod
+manages goes to this mod, and a drag anywhere else goes to them. To avoid two tools answering the
+same gesture, leave these two options off here (they are off by default) or change the gesture
+there.
 
 In the "main left" / "main top" layouts, dragging the divider of the main window changes how much of
 the screen it takes. Each app's minimum size still applies. Your sizes are discarded when a window
@@ -141,9 +145,10 @@ are the focused window border ones, following its effect (pulse, rainbow, gradie
 *Custom* to set the ring color and the selection color yourself. The ring thickness can be set too.
 
 If you release without leaving the ring, the click is passed on to the app when the button is
-released, so a plain right click still opens the context menu. Over a window of the grid,
-dragging with that button no longer works while the option is on; anywhere else (the desktop, the
-taskbar, windows outside the grid) the click is not touched at all. It needs a low-level mouse hook, which only exists while this option
+released, so a plain right click still opens the context menu. Over a window the mod manages
+(in the grid or floating), dragging with that button no longer works while the option is on;
+anywhere else (the desktop, the taskbar, maximized windows, ignored apps) the click is not touched
+at all. It needs a low-level mouse hook, which only exists while this option
 (or the Alt + right button resize) is on.
 
 ### Works with other animation mods
@@ -268,15 +273,19 @@ lateral mais próxima do cursor acompanha o mouse (a direita, se você segurar a
 janela, e assim por diante): arraste para fora para aumentar a janela, para dentro para diminuir.
 As outras janelas abrem espaço enquanto você arrasta, sem sobreposição. Uma lateral junto da borda da tela não tem vizinha,
 então vale a lateral oposta; se nenhuma das duas tiver vizinha, a janela volta ao seu espaço. Esc
-cancela. O AltSnap / AltDrag usam o mesmo gesto de Alt + botão direito: se você também usa um deles,
-troque o gesto lá ou deixe esta opção desligada; senão as janelas da grade são redimensionadas por
-este mod e as demais por eles.
+cancela.
 
 As janelas podem ser movidas de forma parecida: ligue *Mover janelas com Alt + botão esquerdo*,
 segure Alt e o botão esquerdo em qualquer ponto de uma janela e arraste. Uma janela solta apenas se
 move. Uma janela da grade é arrancada da grade depois de um arrasto curto (uns 40 px) e acompanha o
 mouse como janela solta. Se o menu radial estiver em Alt + botão esquerdo, esse gesto abre o menu
 sobre as janelas da grade.
+
+**Se você também usa o AltDrag ou o AltSnap.** Eles usam os mesmos dois gestos (Alt + botão esquerdo
+para mover, Alt + botão direito para redimensionar) em qualquer janela. Com os dois ligados, um
+arrasto sobre uma janela que este mod administra fica com este mod, e em qualquer outro lugar fica
+com eles. Para não ter duas ferramentas respondendo ao mesmo gesto, deixe estas duas opções
+desligadas aqui (é o padrão) ou troque o gesto lá.
 
 Nos layouts "principal à esquerda" / "principal em cima", arrastar a divisória da janela principal
 muda a parte da tela que ela ocupa. O tamanho mínimo de cada app continua valendo. Os tamanhos
@@ -344,9 +353,10 @@ borda da janela em foco, acompanhando o efeito dela (pulsar, arco-íris, degrad�
 também pode ser escolhida.
 
 Se você soltar sem sair do anel, o clique é repassado ao app no momento em que o botão é solto,
-então um clique direito comum continua abrindo o menu de contexto. Sobre uma janela da grade,
-arrastar com esse botão deixa de funcionar enquanto a opção está ligada; em qualquer outro lugar (a
-área de trabalho, a barra de tarefas, janelas fora da grade) o clique nem é tocado. Ela precisa de um gancho de mouse de baixo nível, que só
+então um clique direito comum continua abrindo o menu de contexto. Sobre uma janela que o mod
+administra (na grade ou solta), arrastar com esse botão deixa de funcionar enquanto a opção está
+ligada; em qualquer outro lugar (a área de trabalho, a barra de tarefas, janelas maximizadas, apps
+ignorados) o clique nem é tocado. Ela precisa de um gancho de mouse de baixo nível, que só
 existe enquanto esta opção (ou o redimensionar com Alt + botão direito) está ligada.
 
 ### Funciona junto com outros mods de animação
